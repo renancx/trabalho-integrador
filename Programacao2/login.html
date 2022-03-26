@@ -8,13 +8,18 @@
     <body>
         <div>
             <h1>Realizar login</h1>
-            <form>
+            <form class="login">
                 <p>Informe as credenciais:</p>
-                <p><input type="email" autocomplete="off" placeholder="Email"></p>
-                <p><input type="password" autocomplete="off" placeholder="Senha"></p>
-                <p><input type="submit" value="Send"></p>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Senha</label>
+                  </div>
             </form>
-
+            <br>
             <p>Ainda não possui cadastro?</p>
             <p><a href="cadastro.html">Clique aqui</a></p>
         </div>
