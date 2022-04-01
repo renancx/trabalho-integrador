@@ -38,42 +38,42 @@
                 <p>Quantidade: <span>175</span></p>
                 <p>Data da vacina: <span>07/04/2022</span></p>
                 <p>Data de saída: <span>28/04/2022</span></p>
-                <form method="get" action="./lotes/lote1.html">
+                <form method="get" action="./lotes/lote1.php">
                     <button type="submit">Visualizar</button>
                 </form>
             </div>
             <div id="lote" class="border">
                 <h4>Lote 2</h4>
 
-                <form method="get" action="./lotes/lote2.html">
+                <form method="get" action="./lotes/lote2.php">
                     <button type="submit">Visualizar</button>
                 </form>
             </div>
             <div id="lote" class="border">
                 <h4>Lote 3</h4>
 
-                <form method="get" action="./lotes/lote3.html">
+                <form method="get" action="./lotes/lote3.php">
                     <button type="submit">Visualizar</button>
                 </form>
             </div>
             <div id="lote" class="border">
                 <h4>Lote 4</h4>
 
-                <form method="get" action="./lotes/lote4.html">
+                <form method="get" action="./lotes/lote4.php">
                     <button type="submit">Visualizar</button>
                 </form>
             </div>
             <div id="lote" class="border">
                 <h4>Lote 5</h4>
 
-                <form method="get" action="./lotes/lote5.html">
+                <form method="get" action="./lotes/lote5.php">
                     <button type="submit">Visualizar</button>
                 </form>
             </div>
             <div id="lote" class="border">
                 <h4>Lote 6</h4>
 
-                <form method="get" action="./lotes/lote6.html">
+                <form method="get" action="./lotes/lote6.php">
                     <button type="submit">Visualizar</button>
                 </form>
             </div>
