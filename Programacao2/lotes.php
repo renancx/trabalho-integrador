@@ -32,9 +32,9 @@
         <!--------------------->
         <h1>Informações sobre os lotes de suínos:</h1><hr>
         <p>Quantidade de lotes atual:<span class="qtd_lotes"> 12</span></p>
-        <h4>Lotes atuais:<h4>
+        <h2>Lotes atuais:<h2>
             <div id="lote" class="border">
-                <h4>Lote 1</h4>
+                <h3>Lote 1</h3>
                 <p>ID: <span id="idlote1">1234</span></p>
                 <p>Data de chegada: <span>27/03/2022</span></p>
                 <p>Quantidade: <span>175</span></p>
@@ -43,41 +43,41 @@
                 <form method="get" action="./lotes/lote1.php">
                     <button type="submit">Visualizar</button>
                 </form>
-            </div>
+            </div><br>
             <div id="lote" class="border">
                 <h4>Lote 2</h4>
 
                 <form method="get" action="./lotes/lote2.php">
                     <button type="submit">Visualizar</button>
                 </form>
-            </div>
+            </div><br>
             <div id="lote" class="border">
                 <h4>Lote 3</h4>
 
                 <form method="get" action="./lotes/lote3.php">
                     <button type="submit">Visualizar</button>
                 </form>
-            </div>
+            </div><br>
             <div id="lote" class="border">
                 <h4>Lote 4</h4>
 
                 <form method="get" action="./lotes/lote4.php">
                     <button type="submit">Visualizar</button>
                 </form>
-            </div>
+            </div><br>
             <div id="lote" class="border">
                 <h4>Lote 5</h4>
 
                 <form method="get" action="./lotes/lote5.php">
                     <button type="submit">Visualizar</button>
                 </form>
-            </div>
+            </div><br>
             <div id="lote" class="border">
                 <h4>Lote 6</h4>
 
                 <form method="get" action="./lotes/lote6.php">
                     <button type="submit">Visualizar</button>
                 </form>
-            </div>
+            </div><br>
     </body>
 </html>
