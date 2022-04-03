@@ -12,7 +12,7 @@
         <!--barra de navegacao-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-            <span class="navbar-toggler-icon" onclick="window.location.href='index.html' "></span>
+            <span class="navbar-toggler-icon" onclick="window.location.href='index.php' "></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
@@ -45,7 +45,6 @@
 
             </div>
             <a href="gestao.php">Gerenciar Silos</a><br>
-            <a href="index.html">Voltar</a>
         </div>
     </body>
 </html>

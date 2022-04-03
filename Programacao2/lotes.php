@@ -12,7 +12,7 @@
         <!--barra de navegacao-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-            <span class="navbar-toggler-icon" onclick="window.location.href='index.html' "></span>
+            <span class="navbar-toggler-icon" onclick="window.location.href='index.php' "></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
@@ -31,8 +31,7 @@
         </nav>
         <!--------------------->
         <h1>Informações sobre os lotes de suínos:</h1><hr>
-        <p>Quantidade de lotes atual:<span class="qtd_lotes"> 12</span></p>
-        <p>Lotes atuais: <span>6</span><p>
+        <p>Quantidade de lotes atual:<span class="qtd_lotes"> 6</span></p>
             <div id="lote" class="border">
                 <h3>Lote 1</h3>
                 <p>ID: <span id="idlote1">1234</span></p>
