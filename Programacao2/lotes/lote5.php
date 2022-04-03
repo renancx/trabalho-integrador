@@ -11,5 +11,13 @@
     <body>
         <h1>Lote selecionado:</h1>
         <p class="border">Lote 5</p>
+        <div class=border>
+            <p>ID: <span>1234</span></p>
+            <p>Data de chegada: <span>02/04/2022</span></p>
+            <p>Quantidade de suínos: <span>200 animais</span></p>
+            <p>Data da vacina: <span>08/07/2022</span></p>
+            <p>Data de saída: <span> 06/05/2022</span></p>
+        </div>
+        <a href="/./lotes.php">Voltar</a>
     </body>
 </html>
