@@ -1,25 +1,5 @@
 <?php
-    require_once 'banco.php';
 
-    try {
-        $comando = $banco->prepare('SELECT * from proprietario');
-        $comando->execute();
-        $resultado = $comando->fetchAll(PDO::FETCH_ASSOC);
-
-        if(count($resultado) > 0) {
-            foreach($resultado as $linha) {
-                echo 'Nome: ' . $linha['nome_prop'];
-            }
-        }
-        else {
-            echo 'Nenhum usuário encontrado';
-        }
-    }
-    
-    catch (PDOException $e) {
-        echo 'Erro ao executar comando no banco de dados: ' . $e->getMessage();
-        exit();
-    }
 ?>
 
 <!DOCTYPE html>
