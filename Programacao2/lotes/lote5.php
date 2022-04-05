@@ -18,6 +18,6 @@
             <p>Data da vacina: <span>08/07/2022</span></p>
             <p>Data de saída: <span> 06/05/2022</span></p>
         </div>
-        <a href="/./lotes.php">Voltar</a>
+        <a href="http://localhost/trabalho-integrador/Programacao2/lotes.php">Voltar</a>
     </body>
 </html>
