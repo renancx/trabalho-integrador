@@ -1,15 +1,21 @@
 <?php
     //require_once 'banco.php';
 
+
     
     if(isset($_POST['btnSave']) && $_POST['btnSave']=='Save') {
 
         $cn = pg_connect("host=localhost port=5432 dbname=integrador user=postgres password=12345");
 
-        $tamanho=$_POST['tam_lote'];
-        $data_cheg=$_POST['data_cheg_lote'];
-        $data_sair=$_POST['data_saida_lote'];
-        $query="call add_product(".$tamanho.",".$data_cheg.",".$data_sair.")";
+        $result = pg_query($cn, "SELECT * FROM lote");
+
+        $idlote=$_POST['idlote'];
+        $tamanho=$_POST['tam'];
+        $data_cheg=$_POST['cdata'];
+        $data_sair=$_POST['vdata'];
+        $vendido=$_POST['vendido'];
+
+        $query="call add_product('.$idlote.','.$tamanho.','.$data_cheg.','.$data_sair.','.$vendido.')";
         $res = pg_query($cn,$query);
         if($res) {
             echo 'Saved';
@@ -28,9 +34,11 @@
     <body>
         <h1>Adicionar novo lote</h1>
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+        <span>ID do lote:  </span><input type="text" name="id_lote"><br><br>
         <span>Tamanho do lote:  </span><input type="text" name="tam_lote"><br><br>
         <span>Data de chegada:  </span><input type="text" name="data_cheg_lote"><br><br>
-        <span>Data de saída:  </span><input type="text" name="data_saida_lote"><br>
+        <span>Data de saída:  </span><input type="text" name="data_saida_lote"><br><br>
+        <span>Vendido?  </span><input type="text" name="vendido_lote"><br>
         <input type="submit" values="Save" name="btnSave">
     </body>
 </html>
