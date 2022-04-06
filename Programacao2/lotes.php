@@ -1,5 +1,11 @@
 <?php
+    require_once 'banco.php';
 
+    //$result = pg_query($cn, "SELECT * FROM lote ORDER BY id_lote ASC LIMIT 6");
+    //
+    //while($row = pg_fetch_object($result)) {
+    //    echo 'ID do lote:'.$row->id_lote. '<br> Tamanho:'.$row->tam_lote. '<br>';
+    //}
 ?>
 
 <!DOCTYPE html>
@@ -31,76 +37,25 @@
         </nav>
         <!--------------------->
         <h1>Informações sobre os lotes de suínos:</h1><hr>
-        <p>Quantidade de lotes atual:<span class="qtd_lotes"> 6</span></p>
-            <div id="lote" class="border">
-                <h3>Lote 1</h3>
-                <p>ID: <span id="idlote1">1234</span></p>
-                <p>Data de chegada: <span>27/03/2022</span></p>
-                <p>Quantidade: <span>175</span></p>
-                <p>Data da vacina: <span>07/04/2022</span></p>
-                <p>Data de saída: <span>28/04/2022</span></p>
-                <form method="get" action="./lotes/lote1.php">
-                    <button type="submit">Visualizar</button>
-                </form>
-            </div><br>
-            <div id="lote" class="border">
-                <h3>Lote 2</h3>
-                <p>ID: <span id="idlote1">1234</span></p>
-                <p>Data de chegada: <span>27/03/2022</span></p>
-                <p>Quantidade: <span>175</span></p>
-                <p>Data da vacina: <span>07/04/2022</span></p>
-                <p>Data de saída: <span>28/04/2022</span></p>
-                <form method="get" action="./lotes/lote2.php">
-                    <button type="submit">Visualizar</button>
-                </form>
-            </div><br>
-            <div id="lote" class="border">
-                <h3>Lote 3</h3>
-                <p>ID: <span id="idlote1">1234</span></p>
-                <p>Data de chegada: <span>27/03/2022</span></p>
-                <p>Quantidade: <span>175</span></p>
-                <p>Data da vacina: <span>07/04/2022</span></p>
-                <p>Data de saída: <span>28/04/2022</span></p>
-
-                <form method="get" action="./lotes/lote3.php">
-                    <button type="submit">Visualizar</button>
-                </form>
-            </div><br>
-            <div id="lote" class="border">
-                <h3>Lote 4</h3>
-                <p>ID: <span id="idlote1">1234</span></p>
-                <p>Data de chegada: <span>27/03/2022</span></p>
-                <p>Quantidade: <span>175</span></p>
-                <p>Data da vacina: <span>07/04/2022</span></p>
-                <p>Data de saída: <span>28/04/2022</span></p>
-
-                <form method="get" action="./lotes/lote4.php">
-                    <button type="submit">Visualizar</button>
-                </form>
-            </div><br>
-            <div id="lote" class="border">
-                <h3>Lote 5</h3>
-                <p>ID: <span id="idlote1">1234</span></p>
-                <p>Data de chegada: <span>27/03/2022</span></p>
-                <p>Quantidade: <span>175</span></p>
-                <p>Data da vacina: <span>07/04/2022</span></p>
-                <p>Data de saída: <span>28/04/2022</span></p>
-
-                <form method="get" action="./lotes/lote5.php">
-                    <button type="submit">Visualizar</button>
-                </form>
-            </div><br>
-            <div id="lote" class="border">
-                <h3>Lote 6</h3>
-                <p>ID: <span id="idlote1">1234</span></p>
-                <p>Data de chegada: <span>27/03/2022</span></p>
-                <p>Quantidade: <span>175</span></p>
-                <p>Data da vacina: <span>07/04/2022</span></p>
-                <p>Data de saída: <span>28/04/2022</span></p>
-
-                <form method="get" action="./lotes/lote6.php">
-                    <button type="submit">Visualizar</button>
-                </form>
-            </div><br>
+        
+        <p>Capacidade de lotes da propriedade: 6</p>
+        <p><a href="http://localhost/trabalho-integrador/Programacao2/novolote.php">Adicionar novo lote</a></p>
+                <?php
+                    $result = pg_query($cn, "SELECT * FROM lote ORDER BY id_lote ASC LIMIT 6");
+            
+                    while($row = pg_fetch_object($result)) {
+                    echo 
+                    '<div id="lote" class="border">
+                    <h3>Lote</h3>',
+                        'ID: '.$row->id_lote.'<br>',
+                        'Data de chegada: '.$row->data_cheg_lote.'<br>', 
+                        'Tamanho do lote: '.$row->tam_lote.' animais'.'<br>',
+                        'Data prevista para a saída: '.$row->data_venda_lote.'<br>',
+                        '<form method="get" action="./lotes/lote1.php">
+                            <button type="submit">Visualizar</button>
+                        </form>',
+                    '</div><br>';
+                    }
+                ?>
     </body>
 </html>
