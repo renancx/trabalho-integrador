@@ -1,5 +1,5 @@
 <?php
-    require_once 'banco.php';
+    require_once 'dbase.php';
 
 ?>
 
@@ -15,6 +15,6 @@
         <div class="border">
             
         </div>
-        <a href="/financeiro.php">Voltar</a>
+        <a href="http://localhost/trabalho-integrador/Programacao2/financeiro.php">Voltar</a>
     </body>
 </html>

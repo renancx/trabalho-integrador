@@ -1,5 +1,5 @@
 <?php
-    require_once 'banco.php';
+    require_once 'dbase.php';
 
 ?>
 
@@ -18,6 +18,6 @@
             <p>Data: <span>04/04/2022</span></p>
             <p>Valor: R$<span>500</span>,00</p>
         </div><br>
-        <a href="/financeiro.php">Voltar</a>
+        <a href="http://localhost/trabalho-integrador/Programacao2/financeiro.php">Voltar</a>
     </body>
 </html>
