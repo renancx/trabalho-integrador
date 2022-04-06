@@ -1,4 +1,5 @@
 <?php
+    require_once 'banco.php';
 
 ?>
 
@@ -35,14 +36,14 @@
 
         <!--Mostrar a data atual-->
         <div class="border">
-            <span>Data de hoje:</span>
+            <h3>Data de hoje:</h3>
             <div id="current_date">
                 <script>
                     date=new Date();
                     year=date.getFullYear();
                     month=date.getMonth() + 1;
                     day=date.getDate();
-                    document.getElementById("current_date").innerHTML=month + "/" + day + "/" + year;
+                    document.getElementById("current_date").innerHTML=day + "/" + month + "/" + year;
                 </script>
             </div>
         </div>

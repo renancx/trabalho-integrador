@@ -1,6 +1,8 @@
 <?php
+    require_once 'banco.php';
 
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
