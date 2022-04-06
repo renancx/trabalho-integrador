@@ -11,31 +11,47 @@
     </head>
     <body>
         <!--barra de navegacao-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-            <span class="navbar-toggler-icon" onclick="window.location.href='index.php' "></span>
-            </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="lotes.php">Situação dos Lotes</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="estoque.php">Consultar Estoque</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="financeiro.php">Controle Financeiro</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-        </nav>
-        <!--------------------->
-        <h1>Bem vindo, <span>Proprietário</span></h1>
-            <p>Essa é a situação atual da sua propriedade:</p>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success"></nav><br>
 
+        <h1 class="container text-center">Bem vindo, <span>Proprietário</span></h1><hr>
+        <div class="container text-center">
+            <h5 class="bg-success text-white rounded">Gerencie a sua propriedade:</h5>
+        </div>
+
+        
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card-header bg-success text-white">Gestão dos lotes</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Monitoramento</h5>
+                        <p class="card-text">Consulte e controle a situação dos lotes de suínos de sua propriedade.</p>
+                        <a href="lotes.php" class="btn btn-success">Clique aqui</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-header bg-success text-white">Gerenciar Estoque</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Administração</h5>
+                        <p class="card-text">Controle o estoque de ração de sua propriedade.</p>
+                        <a href="estoque.php" class="btn btn-success">Clique aqui</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card-header bg-success text-white">Situação Financeiro</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Controle</h5>
+                        <p class="card-text">Gerencie as compras e vendas realizadas na propriedade.</p>
+                        <a href="financeiro.php" class="btn btn-success">Clique aqui</a>
+                    </div>
+                </div>        
+            </div>
+        </div><br><br>
+        <br>
+        <br><br>
         <!--Mostrar a data atual-->
-        <div class="border">
+        <br><br>
+        <div class="border card container text-center w-25 bg-success text-white border-dark">
             <h3>Data de hoje:</h3>
             <div id="current_date">
                 <script>
