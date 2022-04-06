@@ -11,7 +11,7 @@
     </head>
     <body>
         <!--barra de navegacao-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
             <div class="container-fluid">
             <span class="navbar-toggler-icon" onclick="window.location.href='index.php' "></span>
               </button>
@@ -31,21 +31,22 @@
             </div>
         </nav>
         <!--------------------->
-
-        <div id="estoque">
-            <h1>Situação do estoque de ração:</h1>
-            <div id="silo1" class="border">
-                <h2>Silo 1</h2>
+        <h1 class="container text-center">Situação do estoque de ração:</h1><hr><br>
+        
+        <div id="estoque" class="container text-center">
+            <div id="silo1" class="card bg-success text-white border-dark">
+                <h2 class="card bg-success">Silo 1</h2>
                 <p>Capacidade: <span id="cap_silo1"></span></p>
                 
-            </div>
+            </div><br>
 
-            <div id="silo2" class="border">
-                <h2>Silo 2</h2>
+            <div id="silo2" class="card bg-success text-white border-dark">
+                <h2 class="card bg-success">Silo 2</h2>
                 <p>Capacidade: <span id="cap_silo2"></span></p>
 
             </div>
-            <a href="gestao.php">Gerenciar Silos</a><br>
+            <br>
+            <a href="gestao.php" class="text-dark">Gerenciar Silos</a><br>
         </div>
     </body>
 </html>
