@@ -16,7 +16,7 @@
     </head>
     <body>
         <!--barra de navegacao-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
             <div class="container-fluid">
             <span class="navbar-toggler-icon" onclick="window.location.href='index.php' "></span>
               </button>
@@ -36,25 +36,33 @@
             </div>
         </nav>
         <!--------------------->
-        <h1>Informações sobre os lotes de suínos:</h1><hr>
-        
-        <p>Capacidade de lotes da propriedade: 6</p>
-        <p><a href="http://localhost/trabalho-integrador/Programacao2/novolote.php">Adicionar novo lote</a></p>
+        <br>
+        <h1 class="container text-center">Informações sobre os lotes de suínos:</h1><hr>
+        <div class="container text-center border-dark rounded w-50 p-3 text-white bg-success">
+            <p class="bg-success text-white rounded">Capacidade de lotes da propriedade: 6</p>
+            <p class="card"><a href="http://localhost/trabalho-integrador/Programacao2/novolote.php">Adicionar novo lote</a></p>
+        </div><br>       
                 <?php
-                    $result = pg_query($cn, "SELECT * FROM lote ORDER BY id_lote ASC LIMIT 6");
+                    $result = pg_query($cn, "SELECT * FROM lote WHERE vendido_lote = 0 ORDER BY id_lote ASC LIMIT 6");
             
                     while($row = pg_fetch_object($result)) {
                     echo 
-                    '<div id="lote" class="border">
-                    <h3>Lote</h3>',
-                        'ID: '.$row->id_lote.'<br>',
-                        'Data de chegada: '.$row->data_cheg_lote.'<br>', 
-                        'Tamanho do lote: '.$row->tam_lote.' animais'.'<br>',
-                        'Data prevista para a saída: '.$row->data_venda_lote.'<br>',
-                        '<form method="get" action="./lotes/lote1.php">
-                            <button type="submit">Visualizar</button>
-                        </form>',
-                    '</div><br>';
+                    '<div class="container w-50 p-3">
+                        <div class="row">
+                            <div id="lote" class="col-sm border bg-white text-center border-white rounded">
+                            <h3 class="card bg-success text-white rounded-bottom">Lote</h3>',
+                            '<div class="card text-white bg-success">',
+                                'ID: '.$row->id_lote.'<br>',
+                                'Data de chegada: '.$row->data_cheg_lote.'<br>', 
+                                'Tamanho do lote: '.$row->tam_lote.' animais'.'<br>',
+                                'Data prevista para a saída: '.$row->data_venda_lote.'<br>',
+                                '<form method="get" action="./lotes/lote1.php">
+                                    <button type="submit">Visualizar</button>
+                                </form>
+                            </div>',
+                            '</div>
+                        </div>
+                    </div><br>';
                     }
                 ?>
     </body>
