@@ -11,7 +11,7 @@
     </head>
     <body>
         <!--barra de navegacao-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
             <div class="container-fluid">
             <span class="navbar-toggler-icon" onclick="window.location.href='index.php' "></span>
                 </button>
@@ -31,18 +31,20 @@
             </div>
         </nav>
         <!--------------------->
-        <h1>Controle Financeiro</h1>
-            <div id="consulta" class="border">
-                <p>Consultar relatório financeiro:</p>
-                <a href="./financeiro/extrato.php">Visualizar</a>
+        <h1 class="container text-center">Controle Financeiro</h1><hr><br>
+            <div id="consulta" class="border-dark container text-center bg-success text-white">
+                <h4>Consultar relatório financeiro:</h4>
+                <a href="http://localhost/trabalho-integrador/Programacao2/financeiro/extrato.php" class="text-dark">Visualizar</a>
             </div><br>
-            <div id="venda" class="border">
-                <p>Registrar venda:</p>
-                <a href="./financeiro/venda.php">Clique aqui</a>
+
+            <div id="venda" class="border-dark container text-center bg-success text-white">
+                <h4>Registrar venda:</h4>
+                <a href="http://localhost/trabalho-integrador/Programacao2/financeiro/venda.php" class="text-dark">Clique aqui</a>
             </div><br>
-            <div id="compra" class="border">
-                <p>Registrar compra:</p>
-                <a href="./financeiro/compra.php">Clique aqui</a>
+
+            <div id="compra" class="border-dark container text-center bg-success text-white">
+                <h4>Registrar compra:</h4>
+                <a href="http://localhost/trabalho-integrador/Programacao2/financeiro/compra.php" class="text-dark">Clique aqui</a>
             </div>
         </body>
 </html>
