@@ -32,19 +32,24 @@
         </nav>
         <!--------------------->
         <h1 class="container text-center">Controle Financeiro</h1><hr><br>
-            <div id="consulta" class="border-dark container text-center bg-success text-white">
-                <h4>Consultar relatório financeiro:</h4>
-                <a href="http://localhost/trabalho-integrador/Programacao2/financeiro/extrato.php" class="text-dark">Visualizar</a>
-            </div><br>
-
-            <div id="venda" class="border-dark container text-center bg-success text-white">
+            <div id="venda" class="border-dark container text-center bg-success text-white w-50">
                 <h4>Registrar venda:</h4>
-                <a href="http://localhost/trabalho-integrador/Programacao2/financeiro/venda.php" class="text-dark">Clique aqui</a>
+                <a href="http://localhost/trabalho-integrador/Programacao2/financeiro/venda.php" class="border border-dark text-white btn btn-success">Clique aqui</a>
             </div><br>
 
-            <div id="compra" class="border-dark container text-center bg-success text-white">
+            <div id="consulta" class="border-dark container text-center bg-success text-white w-50">
+                <h4>Vendas realizadas:</h4>
+                <a href="http://localhost/trabalho-integrador/Programacao2/financeiro/vendas.php" class="border border-dark text-white btn btn-success">Visualizar</a>
+            </div><br><br><br>
+
+            <div id="compra" class="border-dark container text-center bg-success text-white w-50">
                 <h4>Registrar compra:</h4>
-                <a href="http://localhost/trabalho-integrador/Programacao2/financeiro/compra.php" class="text-dark">Clique aqui</a>
-            </div>
+                <a href="http://localhost/trabalho-integrador/Programacao2/financeiro/compra.php" class="border border-dark text-white btn btn-success">Clique aqui</a>
+            </div><br>
+
+            <div id="consulta" class="border-dark container text-center bg-success text-white w-50">
+                <h4>Compras realizadas:</h4>
+                <a href="http://localhost/trabalho-integrador/Programacao2/financeiro/extrato.php" class="border border-dark text-white btn btn-success">Visualizar</a>
+            </div><br>
         </body>
 </html>
