@@ -34,17 +34,18 @@
         <h1 class="container text-center">Situação do estoque de ração:</h1><hr><br>
         
         <div id="estoque" class="container text-center">
-            <div id="silo1" class="card bg-success text-white border-dark">
-                <h2 class="card bg-success">Silo 1</h2>
-                <p>Capacidade: <span id="cap_silo1"></span></p>
-                
-            </div><br>
-
-            <div id="silo2" class="card bg-success text-white border-dark">
-                <h2 class="card bg-success">Silo 2</h2>
-                <p>Capacidade: <span id="cap_silo2"></span></p>
-
-            </div>
+            <?php
+                $result = pg_query($cn, "SELECT * FROM racao ORDER BY cod_racao ASC LIMIT 4");
+            
+                while($row = pg_fetch_object($result)) {
+                    echo '
+                    <div id="silo1" class="card bg-success text-white border-dark">
+                        <h2 class="card bg-success">Silo</h2>
+                            Quantidade disponível: '.$row->qtd_estoq. ' Kgs<br> 
+                            Ração para animal '.$row->tipo_racao. '<br>
+                    </div><br>';
+                }
+            ?>
             <br>
             <a href="gestao.php" class="text-dark">Gerenciar Silos</a><br>
         </div>
