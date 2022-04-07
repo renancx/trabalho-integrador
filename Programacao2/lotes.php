@@ -39,8 +39,8 @@
         <br>
         <h1 class="container text-center">Informações sobre os lotes de suínos:</h1><hr>
         <div class="container text-center border-dark rounded w-50 p-3 text-white bg-success">
-            <p class="bg-success text-white rounded">Capacidade de lotes da propriedade: 6</p>
-            <p class="card"><a href="http://localhost/trabalho-integrador/Programacao2/novolote.php" class="text-dark">Adicionar novo lote</a></p>
+            <p class="bg-success text-white rounded"></p>
+            <p class="card"><a href="http://localhost/trabalho-integrador/Programacao2/novolote.php" class="text-dark btn btn-white">Adicionar novo lote</a></p>
         </div><br>       
                 <?php
                     $result = pg_query($cn, "SELECT * FROM lote WHERE vendido_lote = 0 ORDER BY id_lote ASC LIMIT 6");
