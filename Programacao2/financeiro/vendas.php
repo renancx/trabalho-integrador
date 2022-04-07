@@ -15,18 +15,18 @@
         <!---------------------->
         <div class="container text-center">
             <h1>Relatório Financeiro</h1>
-            <h2>Compras Realizadas:</h2>
+            <h2>Vendas Realizadas:</h2>
         </div><hr><br>
         <div class="container text-center">
             <?php 
-                $result = pg_query($cn, "SELECT * FROM compra");
+                $result = pg_query($cn, "SELECT * FROM venda");
                 
                 while($row = pg_fetch_object($result)) {
                     echo
                         '<div id="silo1" class="card bg-success text-white border-dark p-3">
-                        Valor da compra: '.$row->compra_valor. '<br> 
-                        Data: '.$row->compra_data. '<br>
-                        Categoria: '.$row->compra_categ. '<br><br>
+                        Valor da venda: '.$row->venda_valor. '<br> 
+                        Data: '.$row->venda_data. '<br>
+                        Categoria: '.$row->venda_categ. '<br><br>
                         </div><br>';
                 }
             ?>
