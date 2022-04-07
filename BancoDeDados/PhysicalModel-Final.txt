@@ -1,0 +1,50 @@
+psql -U postgres -h localhost
+
+CREATE DATABASE integrador;
+
+\c integrador
+
+CREATE TABLE Proprietario (
+    nome_prop VARCHAR,
+    cpf_prop INTEGER PRIMARY KEY,
+    email_prop VARCHAR,
+    senha_prop VARCHAR,
+    cidade_prop VARCHAR
+);
+
+CREATE TABLE Lote (
+    id_lote SERIAL PRIMARY KEY,
+    tam_lote INTEGER,
+    data_cheg_lote DATE,
+    data_venda_lote DATE,
+    vendido_lote INTEGER
+);
+
+CREATE TABLE Vacina (
+    tipo_vac VARCHAR,
+    data_vac DATE,
+    aplic_vac INTEGER,
+    id_lote INTEGER
+);
+
+CREATE TABLE Venda (
+    venda_valor INTEGER,
+    venda_data DATE,
+    venda_categ VARCHAR
+);
+
+CREATE TABLE Compra (
+    compra_valor INTEGER,
+    compra_data DATE,
+    compra_categ VARCHAR
+);
+
+CREATE TABLE Racao (
+    cod_racao SERIAL PRIMARY KEY,
+    qtd_estoq INTEGER,
+    tipo_racao VARCHAR
+);
+ 
+ALTER TABLE Vacina ADD CONSTRAINT FK_Vacina_1
+    FOREIGN KEY (id_lote)
+    REFERENCES lote (id_lote);
