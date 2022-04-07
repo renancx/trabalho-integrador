@@ -43,23 +43,26 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
     <body>
-        <div>
+        <!--barra de navegacao-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success"></nav><br>
+        <!---------------------->
+        <div class="text-center container">
             <h1>Realizar login</h1>
             <form class="login" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
                 <p>Informe as credenciais:</p>
-                <div class="form-floating mb-3">
-                    <input type="text" autocomplete="off" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
-                    <label for="floatingInput">Email</label>
+                <div class="form-floating mb-3 text-white">
+                    <input type="text" autocomplete="off" class="form-control bg-success text-white" id="floatingInput" placeholder="name@example.com" name="email">
+                    <label for="floatingInput text-white">Email</label>
                 </div>
-                <div class="form-floating">
-                    <input type="text" autocomplete="off" class="form-control" id="floatingPassword" placeholder="Password" name="pwd">
+                <div class="form-floating text-white">
+                    <input type="password" autocomplete="off" class="form-control bg-success text-white" id="floatingPassword" placeholder="Password" name="pwd">
                     <label for="floatingPassword">Senha</label>
                 </div>
                 <p><br><input type="submit" value="Login" name="verify"></p>
             </form>
             <br>
-            <p>Ainda não possui cadastro?</p>
-            <p><a href="cadastro.php">Clique aqui</a></p>
+                <p>Ainda não possui cadastro?</p>
+                <p><a href="cadastro.php">Clique aqui</a></p>
         </div>
     </body>
 </html>
