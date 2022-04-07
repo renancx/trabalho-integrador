@@ -10,14 +10,18 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
     <body>
-        <h1>Registrar compra</h1>
-        <h2>Selecione as opções:</h2>
-        <div class="border">
-            <h3>Informações</h3>
-            <p>Categoria: <span>Manutenções</span></p>
-            <p>Data: <span>04/04/2022</span></p>
-            <p>Valor: R$<span>300</span>,00</p>
-        </div><br>
-        <a href="http://localhost/trabalho-integrador/Programacao2/financeiro.php">Voltar</a>
+        <!--barra de navegacao-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success"></nav><br>
+        <!---------------------->
+        <h1 class="container text-center">Registrar nova compra</h1><hr><br>
+        <div class="card bg-success text-white rounded-bottom container text-center">
+            <form method="post">
+                <span>Valor da compra:</span><br><input type="text"><br><br>
+                <span>Data:</span><br><input type="text"><br><br>
+                <span>Categoria:</span><br><input type="text"><br><br>
+                <input type="submit" values="enviar"><br>
+            </form>
+            <a href="http://localhost/trabalho-integrador/Programacao2/financeiro.php" class="btn btn-success text-center">Cancelar</a>
+        </div>
     </body>
 </html>
