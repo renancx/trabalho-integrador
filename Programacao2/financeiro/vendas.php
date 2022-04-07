@@ -24,7 +24,7 @@
                 while($row = pg_fetch_object($result)) {
                     echo
                         '<div id="silo1" class="card bg-success text-white border-dark p-3">
-                        Valor da venda: '.$row->venda_valor. '<br> 
+                        Valor da venda: R$'.$row->venda_valor. ',00<br> 
                         Data: '.$row->venda_data. '<br>
                         Categoria: '.$row->venda_categ. '<br><br>
                         </div><br>';
