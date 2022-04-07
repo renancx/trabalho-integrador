@@ -57,7 +57,7 @@
                                 'Tamanho do lote: '.$row->tam_lote.' animais'.'<br>',
                                 'Data prevista para a saída: '.$row->data_venda_lote.'<br>',
                                 '<form method="get" action="./lotes/lote1.php">
-                                    <button type="submit">Visualizar</button>
+                                    <button type="submit">Editar</button>
                                 </form>
                             </div>',
                             '</div>
