@@ -30,7 +30,7 @@
                         </div><br>';
                 }
             ?>
-        <a href="http://localhost/trabalho-integrador/Programacao2/financeiro.php" class="text-dark">Voltar</a>
+        <a href="http://localhost/trabalho-integrador/Programacao2/financeiro.php" class="text-dark btn btn-white text-dark container border border-dark">Voltar</a>
         </div>
     </body>
 </html>
