@@ -62,8 +62,26 @@
                             </div>',
                             '</div>
                         </div>
-                    </div><br>';
+                    </div><br>
+                    ';
                     }
                 ?>
+                <div>
+                    <!--Mostrar a data atual-->
+                    <br><br>
+                    <div class="border card container text-center w-25 bg-success text-white border-dark">
+                        <h3>Data de Hoje:</h3>
+                        <div id="current_date">
+                            <script>
+                                date=new Date();
+                                year=date.getFullYear();
+                                month=date.getMonth() + 1;
+                                day=date.getDate();
+                                document.getElementById("current_date").innerHTML=day + "/" + month + "/" + year;
+                            </script>
+                        </div>
+                    </div>
+                    <!--------------------->
+                </div>
     </body>
 </html>
