@@ -6,7 +6,7 @@ CREATE DATABASE integrador;
 
 CREATE TABLE Proprietario (
     nome_prop VARCHAR(50) NOT NULL,
-    cpf_prop INTEGER PRIMARY KEY NOT NULL,
+    cpf_prop VARCHAR(11) NOT NULL,
     email_prop VARCHAR(50) NOT NULL,
     senha_prop VARCHAR(50) NOT NULL,
     cidade_prop VARCHAR(50) NOT NULL
