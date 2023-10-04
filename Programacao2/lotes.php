@@ -43,8 +43,8 @@
             <p class="card"><a href="http://localhost/trabalho-integrador/Programacao2/novolote.php" class="text-dark btn btn-white">Adicionar novo lote</a></p>
         </div><br>       
                 <?php
-                    $result = pg_query($cn, "SELECT * FROM lote WHERE vendido_lote = 0 ORDER BY id_lote ASC LIMIT 6");
-            
+                    $result = pg_query($cn, "SELECT * FROM lote WHERE vendido_lote = false ORDER BY id_lote ASC LIMIT 6");
+
                     while($row = pg_fetch_object($result)) {
                     echo 
                     '<div class="container w-50 p-3">
