@@ -1,33 +1,26 @@
 <?php
     require_once 'banco.php';
 
-    /*
-    session_start();
-    try {
-        if(isset($_POST['enviar'])) {
-
-            $idlote=$_POST['id_lote'];
-            $tamanho=$_POST['tam_lote'];
-            $data_cheg=$_POST['data_cheg_lote'];
-            $data_sair=$_POST['data_venda_lote'];
-            $vendido=$_POST['vendido_lote'];
-
-            $comando = $db->prepare('INSERT INTO lote (id_lote, tam_lote, data_cheg_lote, data_venda_lote, vendido_lote) VALUES (:id_lote, :tam_lote, :data_cheg_lote, :data_venda_lote, :vendido_lote)');
+    if (isset($_POST['enviar'])) {
+        $id_lote = $_POST['id_lote'];
+        $tam_lote = $_POST['tam_lote'];
+        $data_cheg_lote = $_POST['data_cheg_lote'];
+        $data_venda_lote = isset($_POST['data_venda_lote']) ? $_POST['data_venda_lote'] : null; // Verifica se 'data_venda_lote' está definido
+        $vendido_lote = $_POST['vendido_lote'];
+    
+        // Verifica se 'data_venda_lote' é uma data válida
+        if ($data_venda_lote && strtotime($data_venda_lote)) {
+            $result = pg_query($cn, "INSERT INTO lote (id_lote, tam_lote, data_cheg_lote, data_venda_lote, vendido_lote) VALUES ('$id_lote', '$tam_lote', '$data_cheg_lote', '$data_venda_lote', '$vendido_lote')");
             
-            $comando->bindParam(':id_lote', $idlote);
-            $comando->bindParam(':tam_lote', $tamanho);
-            $comando->bindParam(':data_cheg_lote', $data_cheg);
-            $comando->bindParam(':data_venda_lote', $data_sair);
-            $comando->bindParam(':vendido_lote', $vendido);
-            $comando->execute();
-
-            echo 'deu bom (eu acho)';
+            if ($result) {
+                echo 'Dados inseridos com sucesso!';
+            } else {
+                echo 'Erro ao inserir os dados!';
+            }
+        } else {
+            echo 'Data de venda inválida!';
         }
-    }
-    catch (PDOException $e) {
-        echo 'Erro ao executar comando no banco de dados: ' . $e->getMessage();
-        exit();
-    }*/
+    }    
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,7 +38,7 @@
                 <span>ID do lote:</span><br><input type="text" name="id_lote"><br><br>
                 <span>Tamanho do lote:</span><br><input type="text" name="tam_lote"><br><br>
                 <span>Data de chegada:</span><br><input type="text" name="data_cheg_lote"><br><br>
-                <span>Data de saída:</span><br><input type="text" name="data_saida_lote"><br><br>
+                <span>Data de saída:</span><br><input type="text" name="data_venda_lote"><br><br>
                 <span>Vendido?</span><br><input type="text" name="vendido_lote"><br><br>
                 <input type="submit" values="enviar" name="enviar"><br>
             </form>
